@@ -6,7 +6,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 public class CountingService extends Service {
-    private MyBinder mMyBinder;
+    private final MyBinder mMyBinder;
 
     public CountingService() {
         mMyBinder = new MyBinder();
@@ -17,7 +17,7 @@ public class CountingService extends Service {
         return mMyBinder;
     }
 
-    class MyBinder extends IMyAidlInterface.Stub {
+    private class MyBinder extends IMyAidlInterface.Stub {
 
         @Override
         public int getCount() throws RemoteException {
