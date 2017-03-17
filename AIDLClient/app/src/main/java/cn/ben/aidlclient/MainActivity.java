@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 mService = IMyAidlInterface.Stub.asInterface(service);
                 try {
                     Log.d("ben", String.valueOf(mService.getCount()));
+                    Log.d("ben", String.valueOf(mService.getString()));
+                    Log.d("ben", String.valueOf(mService.getCharSequence()));
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }

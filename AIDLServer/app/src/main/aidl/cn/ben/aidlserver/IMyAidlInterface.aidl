@@ -5,4 +5,6 @@ package cn.ben.aidlserver;
 
 interface IMyAidlInterface {
     int getCount();
+    String getString();
+    CharSequence getCharSequence();
 }
